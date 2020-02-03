@@ -9,6 +9,13 @@ Questionnaire (or "Fragebogen") for VDS30 and VDS90 supporting your psychotherap
 * Export to CSV
 * Check if all fields are answered
 
+## Browser support
+
+* Edge 13+
+* Firefox 34+
+* Chrome 45+
+* Safari 10+
+
 ## 2DO
 
 * Translate into more languages
