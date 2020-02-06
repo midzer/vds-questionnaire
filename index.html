@@ -29,7 +29,7 @@
             margin-bottom: 1rem;
         }
         .question-container > .choice {
-            flex: 0 0 270px;
+            flex: 0 0 275px;
             order: -1;
         }
         @media (max-width: 767px) {
@@ -68,13 +68,16 @@
         footer {
             text-align: right;
         }
+        .top-buffer {
+            margin-top: 2rem;
+        }
     </style>
     <title>VDS Fragebogen</title>
 </head>
 <body>
     <div class="container">
-        <img src="" alt="Logo">
-        <div class="row">
+        <img src="" class="img-fluid top-buffer" alt="Logo">
+        <div class="row top-buffer">
             <div class="col">
                 <input type="text" id="firstname-input" class="form-control" placeholder="Vorname">
             </div>
@@ -82,7 +85,7 @@
                 <input type="text" id="lastname-input" class="form-control" placeholder="Nachname">
             </div>
         </div>
-        <div class="gender-choice">
+        <div class="gender-choice top-buffer">
             <div class="form-check form-check-inline">
                 <input class="form-check-input" type="radio" name="genderRadioOptions" id="genderRadio1" value="0">
                 <label class="form-check-label" for="genderRadio1">männlich</label>
@@ -92,8 +95,8 @@
                 <label class="form-check-label" for="genderRadio2">weiblich</label>
             </div>
         </div>
-        <p>Wie sind Sie, wie denken, fühlen, handeln Sie derzeit im Allgemeinen – in den letzten Monaten oder Jahren?</p>
-        <div class="questionnaire">
+        <div class="questionnaire top-buffer">
+            <p>Wie sind Sie, wie denken, fühlen, handeln Sie derzeit im Allgemeinen – in den letzten Monaten oder Jahren?</p>
         </div>
         <button type="button" class="btn btn-success">Fertigstellen</button>
         <footer>
