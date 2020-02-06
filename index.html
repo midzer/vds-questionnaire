@@ -819,7 +819,7 @@
 
                     const label = document.createElement('label');
                     label.className = 'form-check-label';
-                    label.for = `${vds.name}-${type.abbreviation}-question-${index}-inlineRadio-${i}`;
+                    label.setAttribute('for', `${vds.name}-${type.abbreviation}-question-${index}-inlineRadio-${i}`);
                     label.textContent = choices[i];
 
                     form.appendChild(input);
