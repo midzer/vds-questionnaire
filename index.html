@@ -831,6 +831,7 @@
     // User finished questionnaire
     document.querySelector('button').onclick = () => {
         // Check first if everything is anwered
+        // TODO: enable check
         /*for (let i = 0; i < nameControls.length; i++) {
             if (!nameControls[i].value) {
                 highlightAndScroll(nameControls[i], '.col');
@@ -861,7 +862,11 @@
         const vds = data[index];
         
         // Create lines
-        const gender = document.querySelector('[name="genderRadioOptions"]:checked').value;
+        // TODO: remove if (everything should be anwered)
+        const gender = 0;
+        if (document.querySelector('[name="genderRadioOptions"]:checked')) {
+            gender = document.querySelector('[name="genderRadioOptions"]:checked').value;
+        }
         let lines = `Abkürzung,${vds.name}-Persönlichkeitszug,Patient Skalenwert Summe,Zahl der Items,Patient Skalenwert Mittel,Normstichprobe Mittelwert,Differenz Patient Norm\n`;
         let total = 0;
         let count = 0;
@@ -869,6 +874,7 @@
             const type = vds.types[i];
             let sum = 0;
             type.questions.forEach((question, index) => {
+                // TODO: remove if (everything should be anwered)
                 if (document.querySelector(`[name="${vds.name}-${type.abbreviation}-question-${index}"]:checked`)) {
                     sum += parseInt(document.querySelector(`[name="${vds.name}-${type.abbreviation}-question-${index}"]:checked`).value);
                 }
