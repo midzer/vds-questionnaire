@@ -4,6 +4,8 @@
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>VDS Fragebogen</title>
+    <meta name="description" content="Questionnaire (or Fragebogen in german) for VDS30 and VDS90 supporting your psychotherapeutic and psychiatric work">
     <style>
         /*!
         * Bootstrap v4.4.1 (https://getbootstrap.com/)
@@ -23,6 +25,7 @@
         .btn{display:inline-block;font-weight:400;color:#212529;text-align:center;vertical-align:middle;cursor:pointer;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;background-color:transparent;border:1px solid transparent;padding:.375rem .75rem;font-size:1rem;line-height:1.5;border-radius:.25rem;transition:color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out}@media (prefers-reduced-motion:reduce){.btn{transition:none}}.btn:hover{color:#212529;text-decoration:none}
         .btn-success{color:#fff;background-color:#28a745;border-color:#28a745}.btn-success:hover{color:#fff;background-color:#218838;border-color:#1e7e34}.btn-success.focus,.btn-success:focus{color:#fff;background-color:#218838;border-color:#1e7e34;box-shadow:0 0 0 .2rem rgba(72,180,97,.5)}
         .btn-info{color:#fff;background-color:#17a2b8;border-color:#17a2b8}.btn-info:hover{color:#fff;background-color:#138496;border-color:#117a8b}.btn-info.focus,.btn-info:focus{color:#fff;background-color:#138496;border-color:#117a8b;box-shadow:0 0 0 .2rem rgba(58,176,195,.5)}
+        .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
         /* Custom */
         .question-container {
             display: flex;
@@ -72,17 +75,18 @@
             margin-top: 2rem;
         }
     </style>
-    <title>VDS Fragebogen</title>
 </head>
 <body>
     <div class="container">
         <img src="" class="img-fluid top-buffer" alt="Logo">
         <div class="row top-buffer">
             <div class="col">
-                <input type="text" id="firstname-input" class="form-control" placeholder="Vorname">
+                <label class="sr-only" for="inputFirstName">First Name</label>
+                <input type="text" id="inputFirstName" class="form-control" placeholder="Vorname">
             </div>
             <div class="col">
-                <input type="text" id="lastname-input" class="form-control" placeholder="Nachname">
+                <label class="sr-only" for="inputLastName">Last Name</label>
+                <input type="text" id="inputLastName" class="form-control" placeholder="Nachname">
             </div>
         </div>
         <div class="gender-choice top-buffer">
@@ -895,7 +899,7 @@
         lines += `${totalType.abbreviation},${totalType.name},${total},${count},${totalMedian.toFixed(2)},${parseFloat(totalType.median[gender]).toFixed(2)},${totalDifference}\n`;
 
         // Create download element
-        const fileName = `${document.getElementById('lastname-input').value}-${document.getElementById('firstname-input').value}-${vds.name}-${new Date().toISOString().split('T')[0]}.csv`;
+        const fileName = `${document.getElementById('inputLastName').value}-${document.getElementById('inputFirstName').value}-${vds.name}-${new Date().toISOString().split('T')[0]}.csv`;
         let element = document.createElement('a');
         element.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(lines));
         element.setAttribute('download', fileName);
