@@ -21,7 +21,7 @@
         .form-check-input{position:absolute;margin-top:.3rem;margin-left:-1.25rem}
         .form-check-label{margin-bottom:0}
         .btn{display:inline-block;font-weight:400;color:#212529;text-align:center;vertical-align:middle;cursor:pointer;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;background-color:transparent;border:1px solid transparent;padding:.375rem .75rem;font-size:1rem;line-height:1.5;border-radius:.25rem;transition:color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out}@media (prefers-reduced-motion:reduce){.btn{transition:none}}.btn:hover{color:#212529;text-decoration:none}
-        .btn-secondary{color:#fff;background-color:#6c757d;border-color:#6c757d}.btn-secondary:hover{color:#fff;background-color:#5a6268;border-color:#545b62}.btn-secondary.focus,.btn-secondary:focus{color:#fff;background-color:#5a6268;border-color:#545b62;box-shadow:0 0 0 .2rem rgba(130,138,145,.5)}
+        .btn-success{color:#fff;background-color:#28a745;border-color:#28a745}.btn-success:hover{color:#fff;background-color:#218838;border-color:#1e7e34}.btn-success.focus,.btn-success:focus{color:#fff;background-color:#218838;border-color:#1e7e34;box-shadow:0 0 0 .2rem rgba(72,180,97,.5)}
         .btn-info{color:#fff;background-color:#17a2b8;border-color:#17a2b8}.btn-info:hover{color:#fff;background-color:#138496;border-color:#117a8b}.btn-info.focus,.btn-info:focus{color:#fff;background-color:#138496;border-color:#117a8b;box-shadow:0 0 0 .2rem rgba(58,176,195,.5)}
         /* Custom */
         .question-container {
@@ -47,12 +47,13 @@
             display: none;
             align-items: center;
             justify-content: center;
-            background-color: green;
+            background-color: rgba(26,42,58,.94);
             overflow: hidden;
         }
         .info-box {
             background-color: white;
-            max-width: 75%;
+            border-radius:.25rem;
+            max-width: 60%;
             padding: 3rem;
         }
         @media (max-width: 767px) {
@@ -64,6 +65,9 @@
             display: flex;
             justify-content: space-between;
         }
+        footer {
+            text-align: right;
+        }
     </style>
     <title>VDS Fragebogen</title>
 </head>
@@ -72,10 +76,10 @@
         <img src="" alt="Logo">
         <div class="row">
             <div class="col">
-                <input type="text" class="form-control" placeholder="Vorname">
+                <input type="text" id="firstname-input" class="form-control" placeholder="Vorname">
             </div>
             <div class="col">
-                <input type="text" class="form-control" placeholder="Nachname">
+                <input type="text" id="lastname-input" class="form-control" placeholder="Nachname">
             </div>
         </div>
         <div class="gender-choice">
@@ -91,14 +95,18 @@
         <p>Wie sind Sie, wie denken, fühlen, handeln Sie derzeit im Allgemeinen – in den letzten Monaten oder Jahren?</p>
         <div class="questionnaire">
         </div>
-        <button type="button" class="btn btn-secondary">Fertigstellen</button>
+        <button type="button" class="btn btn-success">Fertigstellen</button>
+        <footer>
+            © CIP-Medien S. Sulz Stand 5.12.2007 <a href="http://www.cip-medien.com" rel="nofollow noopener">www.cip-medien.com</a>
+        </footer>
     </div>
     <div class="overlay">
         <div class="info-box">
-            <p>Geschafft. Vielen Dank für Ihre Zeit und Mühe! Laden Sie die Auswertung herunter oder wenden Sie sich an das Personal.</p>
+            <h1>Geschafft 🙂</h1>
+            <p>Vielen Dank für Ihre Zeit und Mühe! Laden Sie die Auswertung herunter oder wenden Sie sich an das Personal.</p>
             <div class="download-buttons">
-                <button type="button" class="btn btn-info">DL VDS30</button>
-                <button type="button" class="btn btn-info">DL VDS90</button>
+                <button type="button" id="vds30-btn" class="btn btn-info">DL VDS30</button>
+                <button type="button" id="vds90-btn" class="btn btn-info">DL VDS90</button>
             </div>
         </div>
     </div>
@@ -305,13 +313,25 @@
                         "Mein Denken dreht sich oft um mich selbst. Ich bin halt ein besonderer, wichtiger Mensch"
                     ]
                 },
+                {
+                    name: "VDS30-Gesamtwert",
+                    abbreviation: "GE",
+                    median: [
+                        "0.858530661809351","0.810668207202003"
+                    ],
+                    norm: [
+                        "79","76","72","58","70","47","62","49","50","42","49","41","30","27","23","20","21","26","18","15","11","19","11","9","7","3","1","7","0","1","0"
+                    ],
+                    questions: [
+                    ]
+                }
             ]
         },
         {
             name: "vds90",
             types: [
                 {
-                    name: "Schizophrenie, Psychose",
+                    name: "Schizophrenie/Psychose",
                     abbreviation: "SC",
                     median: [
                         "0.16","0.17"
@@ -346,7 +366,7 @@
                     ]
                 },
                 {
-                    name: "Gedächtnis, Konzentration",
+                    name: "Gedächtnis/Konzentration",
                     abbreviation: "OR",
                     median: [
                         "1.04","1.07"
@@ -525,7 +545,7 @@
                     ]
                 },
                 {
-                    name: "Stottern, Poltern",
+                    name: "Stottern/Poltern",
                     abbreviation: "ST",
                     median: [
                         "0.27","0.67"
@@ -723,6 +743,18 @@
                     questions: [
                         "Ich habe ein schreckliches Erlebnis hinter mir (Überfall, Unfall, Naturkatastrophe o. ä.) und einige Zeit später begannen Symptome wie Schreckhaftigkeit, einschießende bildliche Erinnerungen, sich wiederholende Träume, die mich bis heute verfolgen."
                     ]
+                },
+                {
+                    name: "VDS90-Gesamtwert",
+                    abbreviation: "GE",
+                    median: [
+                        "0.58","0.66"
+                    ],
+                    norm: [
+                        "79","76","72","58","70","47","62","49","50","42","49","41","30","27","23","20","21","26","18","15","11","19","11","9","7","3","1","7","0","1","0"
+                    ],
+                    questions: [
+                    ]
                 }
             ]
         }
@@ -824,6 +856,54 @@
         }*/
         // Well done! Show overlay
         document.querySelector('.overlay').style.display = 'flex';
+    };
+    function download (index) {
+        const vds = data[index];
+        
+        // Create lines
+        const gender = document.querySelector('[name="genderRadioOptions"]:checked').value;
+        let lines = `Abkürzung,${vds.name}-Persönlichkeitszug,Patient Skalenwert Summe,Zahl der Items,Patient Skalenwert Mittel,Normstichprobe Mittelwert,Differenz Patient Norm\n`;
+        let total = 0;
+        let count = 0;
+        for (let i = 0; i < vds.types.length -1; i++) {
+            const type = vds.types[i];
+            let sum = 0;
+            type.questions.forEach((question, index) => {
+                if (document.querySelector(`[name="${vds.name}-${type.abbreviation}-question-${index}"]:checked`)) {
+                    sum += parseInt(document.querySelector(`[name="${vds.name}-${type.abbreviation}-question-${index}"]:checked`).value);
+                }
+                count++;
+            });
+            const median = sum / type.questions.length;
+            const difference = (median - type.median[gender]).toFixed(2);
+            lines += `${type.abbreviation},${type.name},${sum},${type.questions.length},${median.toFixed(2)},${parseFloat(type.median[gender]).toFixed(2)},${difference}\n`;
+            total += sum;
+        };
+        // Create total line
+        const totalType = vds.types[vds.types.length -1];
+        const totalMedian = total / count;
+        const totalDifference = (totalMedian - totalType.median[gender]).toFixed(2);
+        lines += `${totalType.abbreviation},${totalType.name},${total},${count},${totalMedian.toFixed(2)},${parseFloat(totalType.median[gender]).toFixed(2)},${totalDifference}\n`;
+
+        // Create download element
+        const fileName = `${document.getElementById('lastname-input').value}-${document.getElementById('firstname-input').value}-${vds.name}-${new Date().toISOString().split('T')[0]}.csv`;
+        let element = document.createElement('a');
+        element.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(lines));
+        element.setAttribute('download', fileName);
+        element.style.display = 'none';
+        document.body.appendChild(element);
+
+        // Trigger download
+        element.click();
+
+        // Cleanup
+        document.body.removeChild(element);
+    }
+    document.getElementById('vds30-btn').onclick = () => {
+        download(0);
+    };
+    document.getElementById('vds90-btn').onclick = () => {
+        download(1);
     };
     // Attention: norm data for male/female is NOT complete, leave out first
     </script>
