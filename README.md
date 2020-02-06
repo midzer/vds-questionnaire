@@ -1,6 +1,6 @@
 # vds-questionnaire
 
-Questionnaire (or "Fragebogen") for VDS30 and VDS90 supporting your psychotherapeutic and psychiatric work
+Questionnaire (or Fragebogen in german) for VDS30 and VDS90 supporting your psychotherapeutic and psychiatric work
 
 ## Features
 
