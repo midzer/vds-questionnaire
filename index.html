@@ -56,7 +56,6 @@
             align-items: center;
             justify-content: center;
             background-color: rgba(26,42,58,.94);
-            overflow: hidden;
         }
         .info-box {
             background-color: white;
@@ -853,6 +852,9 @@
             const overlay = document.querySelector('.overlay');
             overlay.style.display = 'flex';
             overlay.setAttribute('aria-hidden', false);
+
+            // Hide scrollbars
+            document.body.style.overflow = 'hidden';
         }
         else {
             // Jump to first invalid element
