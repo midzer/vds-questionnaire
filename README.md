@@ -5,9 +5,9 @@ Questionnaire (or Fragebogen in german) for VDS30 and VDS90 supporting your psyc
 ## Features
 
 * Offline-first
+* Check if all fields are answered
 * Evaluation
 * Export to CSV
-* Check if all fields are answered
 
 ## Browser support
 
@@ -18,9 +18,10 @@ Questionnaire (or Fragebogen in german) for VDS30 and VDS90 supporting your psyc
 
 ## 2DO
 
+* Incomplete norm data for male/female -> missing "Prozentrang" in evaluation
 * Translate into more languages
 * Graphical export
 
 ## Copyright of data
 
-* Serge Sulz [www.cip-medien.com](http://www.cip-medien.com)
+* Serge Sulz Stand 5.12.2007 [www.cip-medien.com](http://www.cip-medien.com)
