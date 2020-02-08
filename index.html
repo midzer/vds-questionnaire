@@ -16,12 +16,17 @@
         :root{--blue:#007bff;--indigo:#6610f2;--purple:#6f42c1;--pink:#e83e8c;--red:#dc3545;--orange:#fd7e14;--yellow:#ffc107;--green:#28a745;--teal:#20c997;--cyan:#17a2b8;--white:#fff;--gray:#6c757d;--gray-dark:#343a40;--primary:#007bff;--secondary:#6c757d;--success:#28a745;--info:#17a2b8;--warning:#ffc107;--danger:#dc3545;--light:#f8f9fa;--dark:#343a40;--breakpoint-xs:0;--breakpoint-sm:576px;--breakpoint-md:768px;--breakpoint-lg:992px;--breakpoint-xl:1200px;--font-family-sans-serif:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";--font-family-monospace:SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace}*,::after,::before{box-sizing:border-box}html{font-family:sans-serif;line-height:1.15;-webkit-text-size-adjust:100%;-webkit-tap-highlight-color:transparent}article,aside,figcaption,figure,footer,header,hgroup,main,nav,section{display:block}body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";font-size:1rem;font-weight:400;line-height:1.5;color:#212529;text-align:left;background-color:#fff}[tabindex="-1"]:focus:not(:focus-visible){outline:0!important}hr{box-sizing:content-box;height:0;overflow:visible}h1,h2,h3,h4,h5,h6{margin-top:0;margin-bottom:.5rem}p{margin-top:0;margin-bottom:1rem}abbr[data-original-title],abbr[title]{text-decoration:underline;-webkit-text-decoration:underline dotted;text-decoration:underline dotted;cursor:help;border-bottom:0;-webkit-text-decoration-skip-ink:none;text-decoration-skip-ink:none}address{margin-bottom:1rem;font-style:normal;line-height:inherit}dl,ol,ul{margin-top:0;margin-bottom:1rem}ol ol,ol ul,ul ol,ul ul{margin-bottom:0}dt{font-weight:700}dd{margin-bottom:.5rem;margin-left:0}blockquote{margin:0 0 1rem}b,strong{font-weight:bolder}small{font-size:80%}sub,sup{position:relative;font-size:75%;line-height:0;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}a{color:#007bff;text-decoration:none;background-color:transparent}a:hover{color:#0056b3;text-decoration:underline}a:not([href]){color:inherit;text-decoration:none}a:not([href]):hover{color:inherit;text-decoration:none}code,kbd,pre,samp{font-family:SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;font-size:1em}pre{margin-top:0;margin-bottom:1rem;overflow:auto}figure{margin:0 0 1rem}img{vertical-align:middle;border-style:none}svg{overflow:hidden;vertical-align:middle}table{border-collapse:collapse}caption{padding-top:.75rem;padding-bottom:.75rem;color:#6c757d;text-align:left;caption-side:bottom}th{text-align:inherit}label{display:inline-block;margin-bottom:.5rem}button{border-radius:0}button:focus{outline:1px dotted;outline:5px auto -webkit-focus-ring-color}button,input,optgroup,select,textarea{margin:0;font-family:inherit;font-size:inherit;line-height:inherit}button,input{overflow:visible}button,select{text-transform:none}select{word-wrap:normal}[type=button],[type=reset],[type=submit],button{-webkit-appearance:button}[type=button]:not(:disabled),[type=reset]:not(:disabled),[type=submit]:not(:disabled),button:not(:disabled){cursor:pointer}[type=button]::-moz-focus-inner,[type=reset]::-moz-focus-inner,[type=submit]::-moz-focus-inner,button::-moz-focus-inner{padding:0;border-style:none}input[type=checkbox],input[type=radio]{box-sizing:border-box;padding:0}input[type=date],input[type=datetime-local],input[type=month],input[type=time]{-webkit-appearance:listbox}textarea{overflow:auto;resize:vertical}fieldset{min-width:0;padding:0;margin:0;border:0}legend{display:block;width:100%;max-width:100%;padding:0;margin-bottom:.5rem;font-size:1.5rem;line-height:inherit;color:inherit;white-space:normal}progress{vertical-align:baseline}[type=number]::-webkit-inner-spin-button,[type=number]::-webkit-outer-spin-button{height:auto}[type=search]{outline-offset:-2px;-webkit-appearance:none}[type=search]::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{font:inherit;-webkit-appearance:button}output{display:inline-block}summary{display:list-item;cursor:pointer}template{display:none}[hidden]{display:none!important}
         .container{width:100%;padding-right:15px;padding-left:15px;margin-right:auto;margin-left:auto}@media (min-width:576px){.container{max-width:540px}}@media (min-width:768px){.container{max-width:720px}}@media (min-width:992px){.container{max-width:960px}}@media (min-width:1200px){.container{max-width:1140px}}
         .row{display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;margin-right:-15px;margin-left:-15px}
-        .col{position:relative;width:100%;padding-right:15px;padding-left:15px}.col{-ms-flex-preferred-size:0;flex-basis:0;-ms-flex-positive:1;flex-grow:1;max-width:100%}
+        .col{position:relative;width:100%;padding-right:15px;padding-left:15px}
+        .col{-ms-flex-preferred-size:0;flex-basis:0;-ms-flex-positive:1;flex-grow:1;max-width:100%}
         .form-control{display:block;width:100%;height:calc(1.5em + .75rem + 2px);padding:.375rem .75rem;font-size:1rem;font-weight:400;line-height:1.5;color:#495057;background-color:#fff;background-clip:padding-box;border:1px solid #ced4da;border-radius:.25rem;transition:border-color .15s ease-in-out,box-shadow .15s ease-in-out}@media (prefers-reduced-motion:reduce){.form-control{transition:none}}.form-control::-ms-expand{background-color:transparent;border:0}.form-control:-moz-focusring{color:transparent;text-shadow:0 0 0 #495057}.form-control:focus{color:#495057;background-color:#fff;border-color:#80bdff;outline:0;box-shadow:0 0 0 .2rem rgba(0,123,255,.25)}.form-control::-webkit-input-placeholder{color:#6c757d;opacity:1}.form-control::-moz-placeholder{color:#6c757d;opacity:1}.form-control:-ms-input-placeholder{color:#6c757d;opacity:1}.form-control::-ms-input-placeholder{color:#6c757d;opacity:1}.form-control::placeholder{color:#6c757d;opacity:1}
         .form-check{position:relative;display:block;padding-left:1.25rem}
         .form-check-inline{display:-ms-inline-flexbox;display:inline-flex;-ms-flex-align:center;align-items:center;padding-left:0;margin-right:.75rem}.form-check-inline .form-check-input{position:static;margin-top:0;margin-right:.3125rem;margin-left:0}
         .form-check-input{position:absolute;margin-top:.3rem;margin-left:-1.25rem}
         .form-check-label{margin-bottom:0}
+        .was-validated .form-control:valid{border-color:#28a745;padding-right:calc(1.5em + .75rem);background-image:url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8' viewBox='0 0 8 8'%3e%3cpath fill='%2328a745' d='M2.3 6.73L.6 4.53c-.4-1.04.46-1.4 1.1-.8l1.1 1.4 3.4-3.8c.6-.63 1.6-.27 1.2.7l-4 4.6c-.43.5-.8.4-1.1.1z'/%3e%3c/svg%3e");background-repeat:no-repeat;background-position:right calc(.375em + .1875rem) center;background-size:calc(.75em + .375rem) calc(.75em + .375rem)}.was-validated .form-control:valid:focus{border-color:#28a745;box-shadow:0 0 0 .2rem rgba(40,167,69,.25)}
+        .was-validated .form-check-input:valid~.form-check-label{color:#28a745}
+        .was-validated .form-control:invalid{border-color:#dc3545;padding-right:calc(1.5em + .75rem);background-image:url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' fill='none' stroke='%23dc3545' viewBox='0 0 12 12'%3e%3ccircle cx='6' cy='6' r='4.5'/%3e%3cpath stroke-linejoin='round' d='M5.8 3.6h.4L6 6.5z'/%3e%3ccircle cx='6' cy='8.2' r='.6' fill='%23dc3545' stroke='none'/%3e%3c/svg%3e");background-repeat:no-repeat;background-position:right calc(.375em + .1875rem) center;background-size:calc(.75em + .375rem) calc(.75em + .375rem)}.was-validated .form-control:invalid:focus{border-color:#dc3545;box-shadow:0 0 0 .2rem rgba(220,53,69,.25)}
+        .was-validated .form-check-input:invalid~.form-check-label{color:#dc3545}
         .btn{display:inline-block;font-weight:400;color:#212529;text-align:center;vertical-align:middle;cursor:pointer;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;background-color:transparent;border:1px solid transparent;padding:.375rem .75rem;font-size:1rem;line-height:1.5;border-radius:.25rem;transition:color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out}@media (prefers-reduced-motion:reduce){.btn{transition:none}}.btn:hover{color:#212529;text-decoration:none}
         .btn-success{color:#fff;background-color:#28a745;border-color:#28a745}.btn-success:hover{color:#fff;background-color:#218838;border-color:#1e7e34}.btn-success.focus,.btn-success:focus{color:#fff;background-color:#218838;border-color:#1e7e34;box-shadow:0 0 0 .2rem rgba(72,180,97,.5)}
         .btn-info{color:#fff;background-color:#17a2b8;border-color:#17a2b8}.btn-info:hover{color:#fff;background-color:#138496;border-color:#117a8b}.btn-info.focus,.btn-info:focus{color:#fff;background-color:#138496;border-color:#117a8b;box-shadow:0 0 0 .2rem rgba(58,176,195,.5)}
@@ -55,9 +60,10 @@
         }
         .info-box {
             background-color: white;
-            border-radius:.25rem;
-            max-width: 60%;
-            padding: 3rem;
+            border-radius: .25rem;
+            max-width: 50%;
+            padding: 1rem;
+            box-shadow: 0 0.5rem 1rem rgba(0,0,0,.5);
         }
         @media (max-width: 767px) {
             .info-box {
@@ -67,6 +73,17 @@
         .download-buttons {
             display: flex;
             justify-content: space-between;
+        }
+        @media (max-width: 575px) {
+            .download-buttons {
+                display: block;
+            }
+            .btn-info {
+                display: block;
+            }
+            .btn-info:first-child {
+                margin-bottom: 1rem;
+            }
         }
         footer {
             text-align: right;
@@ -78,42 +95,41 @@
 </head>
 <body>
     <div class="container">
-        <img src="" class="img-fluid top-buffer" alt="Logo">
-        <div class="row top-buffer">
-            <div class="col">
-                <label class="sr-only" for="inputFirstName">First Name</label>
-                <input type="text" id="inputFirstName" class="form-control" placeholder="Vorname">
+        <form class="questionnaire" novalidate>
+            <p>Die Beantwortung dieses Fragebogens dauert etwas. Nimm dir mindestens 30 Minuten Zeit.</p>
+            <div class="row">
+                <div class="col">
+                    <label class="sr-only" for="inputFirstName">First Name</label>
+                    <input type="text" id="inputFirstName" class="form-control" placeholder="Vorname" required>
+                </div>
+                <div class="col">
+                    <label class="sr-only" for="inputLastName">Last Name</label>
+                    <input type="text" id="inputLastName" class="form-control" placeholder="Nachname" required>
+                </div>
             </div>
-            <div class="col">
-                <label class="sr-only" for="inputLastName">Last Name</label>
-                <input type="text" id="inputLastName" class="form-control" placeholder="Nachname">
+            <div class="gender-choice top-buffer">
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="genderRadioOptions" id="genderRadio1" value="0" required>
+                    <label class="form-check-label" for="genderRadio1">männlich</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="genderRadioOptions" id="genderRadio2" value="1" required>
+                    <label class="form-check-label" for="genderRadio2">weiblich</label>
+                </div>
             </div>
-        </div>
-        <div class="gender-choice top-buffer">
-            <div class="form-check form-check-inline">
-                <input class="form-check-input" type="radio" name="genderRadioOptions" id="genderRadio1" value="0">
-                <label class="form-check-label" for="genderRadio1">männlich</label>
-            </div>
-            <div class="form-check form-check-inline">
-                <input class="form-check-input" type="radio" name="genderRadioOptions" id="genderRadio2" value="1">
-                <label class="form-check-label" for="genderRadio2">weiblich</label>
-            </div>
-        </div>
-        <div class="questionnaire top-buffer">
-            <p>Wie sind Sie, wie denken, fühlen, handeln Sie derzeit im Allgemeinen – in den letzten Monaten oder Jahren?</p>
-        </div>
-        <button type="button" class="btn btn-success">Fertigstellen</button>
+            <p>Wie sind Sie, wie denken, fühlen, handeln Sie derzeit im Allgemeinen - in den letzten Monaten oder Jahren?</p>
+        </form>
         <footer>
-            Daten © CIP-Medien S. Sulz Stand 5.12.2007 <a href="http://www.cip-medien.com" rel="nofollow noopener">www.cip-medien.com</a>
+            Daten © Serge Sulz Stand 5.12.2007 <a href="http://www.cip-medien.com" rel="nofollow noopener">www.cip-medien.com</a>
         </footer>
     </div>
-    <div class="overlay">
+    <div class="overlay" tabindex="-1" role="dialog" aria-hidden="true" aria-labelledby="Fragebogenergebnis">
         <div class="info-box">
             <h1>Geschafft 🙂</h1>
             <p>Vielen Dank für Ihre Zeit und Mühe! Laden Sie die Auswertung herunter oder wenden Sie sich an das Personal.</p>
             <div class="download-buttons">
-                <button type="button" id="vds30-btn" class="btn btn-info">DL VDS30</button>
-                <button type="button" id="vds90-btn" class="btn btn-info">DL VDS90</button>
+                <button type="button" id="vds30-btn" class="btn btn-info">Teil 1 herunterladen</button>
+                <button type="button" id="vds90-btn" class="btn btn-info">Teil 2 herunterladen</button>
             </div>
         </div>
     </div>
@@ -766,25 +782,6 @@
             ]
         }
     ];
-    // Global functions
-    function removeBorder (element, closest) {
-        element.closest(closest).style.border = 'none';
-    }
-    function highlightAndScroll (element, closest) {
-        element.closest(closest).style.border = '2px solid red';
-        element.scrollIntoView();
-        window.scrollBy(0, -100);
-    }
-    // Init
-    const nameControls = document.querySelectorAll('.form-control');
-    for (let i = 0; i < nameControls.length; i++) {
-        nameControls[i].addEventListener('input', event => removeBorder(event.target, '.col'));
-    }
-    const genderOptions = `input[name="genderRadioOptions"]`;
-    const genderRadios = document.querySelectorAll(genderOptions);
-    for (let i = 0; i < genderRadios.length; i++) {
-        genderRadios[i].addEventListener('click', event => removeBorder(event.target, '.gender-choice'));
-    }
     // Create questionnaire
     const choices = [
         "nicht",
@@ -792,6 +789,7 @@
         "mittel",
         "sehr"
     ];
+    const frag = document.createDocumentFragment();
     data.forEach(vds => {
         vds.types.forEach(type => {
             type.questions.forEach((question, index) => {
@@ -815,7 +813,7 @@
                     input.name = `${vds.name}-${type.abbreviation}-question-${index}`;
                     input.id = `${vds.name}-${type.abbreviation}-question-${index}-inlineRadio-${i}`;
                     input.value = i;
-                    input.addEventListener('click', event => removeBorder(event.target, '.choice'));
+                    input.required = true;
 
                     const label = document.createElement('label');
                     label.className = 'form-check-label';
@@ -831,49 +829,47 @@
                 questionContainer.appendChild(questionElement);
                 questionContainer.appendChild(choice);
 
-                document.querySelector('.questionnaire').appendChild(questionContainer);
+                frag.appendChild(questionContainer);
             });
         });
     });
+    // Create finish button
+    const finishButton = document.createElement('button');
+    finishButton.className = 'btn btn-success';
+    finishButton.type = 'submit';
+    finishButton.textContent = 'Fertigstellen';
+    frag.appendChild(finishButton);
+
+    window.requestAnimationFrame(() => document.querySelector('.questionnaire').appendChild(frag));
+
     // User finished questionnaire
-    document.querySelector('button').onclick = () => {
-        // Check first if everything is anwered
-        // TODO: enable check
-        /*for (let i = 0; i < nameControls.length; i++) {
-            if (!nameControls[i].value) {
-                highlightAndScroll(nameControls[i], '.col');
-                return;
-            }
+    const form = document.querySelector('form');
+    form.addEventListener('submit', function(event) {
+        event.preventDefault();
+        event.stopPropagation();
+        
+        if (form.checkValidity()) {
+            // Well done! Show overlay
+            const overlay = document.querySelector('.overlay');
+            overlay.style.display = 'flex';
+            overlay.setAttribute('aria-hidden', false);
         }
-        if (!document.querySelector(genderOptions + ':checked')) {
-            highlightAndScroll(document.querySelector(genderOptions), '.gender-choice');
-            return;
+        else {
+            // Jump to first invalid element
+            const element = document.querySelector('form :invalid');
+            element.scrollIntoView();
+            element.focus();
+
+            // Scroll a bit more
+            window.scrollBy(0, -100);
         }
-        for (let i = 0; i < data.length; i++) {
-            const types = data[i].types;
-            for (let j = 0; j < types.length; j++) {
-                const questions = types[j].questions;
-                for (let k = 0; k < questions.length; k++) {
-                    const radioOptions = `input[name="${data[i].name}-${types[j].abbreviation}-question-${k}"]`;
-                    if (!document.querySelector(radioOptions + ':checked')) {
-                        highlightAndScroll(document.querySelector(radioOptions), '.choice');
-                        return;
-                    }
-                }
-            }
-        }*/
-        // Well done! Show overlay
-        document.querySelector('.overlay').style.display = 'flex';
-    };
+        form.classList.add('was-validated');
+    }, false);
     function download (index) {
         const vds = data[index];
         
         // Create lines
-        // TODO: remove if (everything should be anwered)
-        const gender = 0;
-        if (document.querySelector('[name="genderRadioOptions"]:checked')) {
-            gender = document.querySelector('[name="genderRadioOptions"]:checked').value;
-        }
+        const gender = document.querySelector('[name="genderRadioOptions"]:checked').value;
         let lines = `Abkürzung,${vds.name}-Persönlichkeitszug,Patient Skalenwert Summe,Zahl der Items,Patient Skalenwert Mittel,Normstichprobe Mittelwert,Differenz Patient Norm\n`;
         let total = 0;
         let count = 0;
@@ -881,10 +877,7 @@
             const type = vds.types[i];
             let sum = 0;
             type.questions.forEach((question, index) => {
-                // TODO: remove if (everything should be anwered)
-                if (document.querySelector(`[name="${vds.name}-${type.abbreviation}-question-${index}"]:checked`)) {
-                    sum += parseInt(document.querySelector(`[name="${vds.name}-${type.abbreviation}-question-${index}"]:checked`).value);
-                }
+                sum += parseInt(document.querySelector(`[name="${vds.name}-${type.abbreviation}-question-${index}"]:checked`).value);
                 count++;
             });
             const median = sum / type.questions.length;
@@ -912,13 +905,13 @@
         // Cleanup
         document.body.removeChild(element);
     }
+    // Download buttons
     document.getElementById('vds30-btn').onclick = () => {
         download(0);
     };
     document.getElementById('vds90-btn').onclick = () => {
         download(1);
     };
-    // Attention: norm data for male/female is NOT complete, leave out first
     </script>
 </body>
 </html>
