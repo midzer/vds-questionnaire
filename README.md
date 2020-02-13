@@ -20,7 +20,6 @@ Questionnaire (or Fragebogen in german) for VDS30 and VDS90 supporting your psyc
 
 * Incomplete norm data for male/female -> missing "Prozentrang" in evaluation
 * Translate into more languages
-* Graphical export
 
 ## Copyright of data
 
