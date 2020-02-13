@@ -840,7 +840,8 @@
                     input.addEventListener('click', function(event) {
                         if (choice.dataset.answered === 'false') {
                             // Update progress bar
-                            const value = parseInt(checked++ / numberQuestions * 100);
+                            checked++;
+                            const value = parseInt(checked / numberQuestions * 100);
                             
                             const progressBar = document.querySelector('.progress-bar');
                             progressBar.style.width = progressBar.textContent = value + '%';
